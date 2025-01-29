@@ -1,0 +1,49 @@
+---
+title: Installation
+description: Get started with Code Snippets
+---
+
+# Installation
+
+Follow these steps to get started with Code Snippets.
+
+## Prerequisites
+
+- Node.js 18 or later
+- npm or yarn
+- Git (optional)
+
+## Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/code-snippets.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd code-snippets
+```
+
+3. Install dependencies:
+```bash
+npm install
+```
+
+4. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
+
+5. Configure your environment variables:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-key
+```
+
+6. Start the development server:
+```bash
+npm run dev
+```
+
+Visit `http://localhost:3000` to see your application running.

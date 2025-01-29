@@ -1,0 +1,75 @@
+---
+title: API Reference
+description: API documentation for the code sharing platform
+---
+
+# API Reference
+
+Our API allows you to programmatically create and retrieve code snippets.
+
+## Authentication
+
+No authentication is required for basic usage. However, rate limiting is applied to prevent abuse.
+
+## Endpoints
+
+### Create Snippet
+
+```http
+POST /api/snippets
+```
+
+#### Request Body
+
+```json
+{
+  "title": "Optional title",
+  "content": "Your code or text content",
+  "language": "javascript",
+  "expires_at": "2024-02-01T00:00:00Z" // Optional
+}
+```
+
+#### Response
+
+```json
+{
+  "id": "uuid",
+  "url": "https://example.com/p/uuid"
+}
+```
+
+### Get Snippet
+
+```http
+GET /api/snippets/:id
+```
+
+#### Response
+
+```json
+{
+  "id": "uuid",
+  "title": "Optional title",
+  "content": "Your code or text content",
+  "language": "javascript",
+  "created_at": "2024-01-29T02:33:05Z",
+  "expires_at": "2024-02-01T00:00:00Z"
+}
+```
+
+## Rate Limiting
+
+- 60 requests per hour for snippet creation
+- 1000 requests per hour for snippet retrieval
+
+## Error Responses
+
+```json
+{
+  "error": {
+    "code": "rate_limit_exceeded",
+    "message": "Too many requests"
+  }
+}
+```
