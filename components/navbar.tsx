@@ -5,7 +5,7 @@ import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-export function Navbar() {
+export function Navbar() { 
   const { setTheme, theme } = useTheme()
 
   return (
