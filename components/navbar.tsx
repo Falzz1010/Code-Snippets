@@ -2,7 +2,7 @@
 
 import { Moon, Sun, Github } from "lucide-react"
 import { useTheme } from "next-themes"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button" 
 import Link from "next/link"
 
 export function Navbar() { 
