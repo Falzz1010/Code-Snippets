@@ -15,7 +15,7 @@ export function Navbar() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="font-bold">Code Share</span>
           </Link> 
-        </div>
+        </div>  
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <nav className="flex items-center space-x-2">
             <Button
